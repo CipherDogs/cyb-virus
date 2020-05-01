@@ -1,8 +1,8 @@
-# cyb-virus
+# cyb~Virus
 
 ## Mission
 
-Help you fuckgoogle rigth from Chrome!
+Help you fuckgoogle rigth from Firefox!
 
 ## Features
 1. Create accounts and save mnemonic
@@ -12,17 +12,13 @@ Help you fuckgoogle rigth from Chrome!
 6. Primitive search in Cyber protocol
 7. Node config
 
-
 ## Dev environment
 ```
-yarn install
-yarn run watch:dev
+npm install
+npm run watch:dev
 ```
 
 ## Build 
 ```
-yarn run build:dev
+npm run build:dev
 ```
-
-## Add to Chrome from build
-Go to `chrome://extensions/` and install extension by folder ./dist 

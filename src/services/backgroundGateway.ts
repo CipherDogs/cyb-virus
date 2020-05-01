@@ -1,9 +1,9 @@
 function sendMessage(data) {
-  (global as any).chrome.runtime.sendMessage(data);
+  (global as any).browser.runtime.sendMessage(data);
 }
 
 function onMessage(type, callback) {
-  (global as any).chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+  (global as any).browser.runtime.onMessage.addListener((request, sender, sendResponse) => {
     if (!request || request.type != type) {
       return;
     }

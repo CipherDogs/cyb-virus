@@ -2,7 +2,7 @@ const regex = require('./services/regex');
 
 document.addEventListener('cyb:link', function(data: any) {
   // alert(JSON.stringify(data.detail));
-  (global as any).chrome.runtime.sendMessage(
+  (global as any).browser.runtime.sendMessage(
     {
       type: 'page-action',
       method: 'link-hash',
@@ -77,13 +77,13 @@ document.addEventListener('cyb:save', async function(data: any) {
     keywords: data.detail.keywords,
     link: data.detail.link,
   };
-  (global as any).chrome.runtime.sendMessage({ type: 'page-action', method: 'save-content', data: messageData });
+  (global as any).browser.runtime.sendMessage({ type: 'page-action', method: 'save-content', data: messageData });
 });
 
 document.addEventListener('cyb:is-content-exists', async function(data: any) {
   const base64 = await srcToBase64(data.detail.src);
   // alert(JSON.stringify(data.detail));
-  (global as any).chrome.runtime.sendMessage({
+  (global as any).browser.runtime.sendMessage({
     type: 'is-content-exists:request',
     data: {
       content: base64.content,
@@ -96,7 +96,7 @@ initEvent.initEvent('cyb:init');
 document.dispatchEvent(initEvent);
 // console.log('dispatchEvent', initEvent);
 
-(global as any).chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+(global as any).browser.runtime.onMessage.addListener((request, sender, sendResponse) => {
   // alert('onMessage: ' + JSON.stringify(request));
   console.log('onMessage', request);
   if (request.type === 'popup-opened') {
@@ -113,7 +113,7 @@ document.dispatchEvent(initEvent);
 });
 
 const inpageJs = document.createElement('script');
-inpageJs.src = chrome.runtime.getURL('inpage.js');
+inpageJs.src = browser.runtime.getURL('inpage.js');
 inpageJs.onload = function() {
   this['remove']();
 };

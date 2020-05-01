@@ -40,7 +40,7 @@ export class PermanentStorage {
 
   static async setValue(name, value) {
     return new Promise((resolve, reject) => {
-      if (!(global as any).chrome.storage) {
+      if (!(global as any).browser.storage) {
         this.pseudoStorage[name] = value;
         return resolve();
       }
@@ -48,7 +48,7 @@ export class PermanentStorage {
         value = JSON.stringify(value);
       }
       // console.log('setValue', name, value);
-      (global as any).chrome.storage.sync.set({ [name]: value }, function() {
+      (global as any).browser.storage.sync.set({ [name]: value }, function() {
         resolve();
       });
     });
@@ -56,10 +56,10 @@ export class PermanentStorage {
 
   static async getValue(name) {
     return new Promise((resolve, reject) => {
-      if (!(global as any).chrome.storage) {
+      if (!(global as any).browser.storage) {
         return resolve(this.pseudoStorage[name]);
       }
-      (global as any).chrome.storage.sync.get([name], function(result) {
+      (global as any).browser.storage.sync.get([name], function(result) {
         // console.log('getValue', name, result[name]);
         resolve(result[name]);
       });

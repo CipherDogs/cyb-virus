@@ -19,11 +19,11 @@
     }
   },
   "dependencies": {
-    "@cybercongress/js-amino": "https://github.com/cybercongress/js-amino.git",
+    "@cybercongress/js-amino": "git+https://github.com/cybercongress/js-amino.git",
     "@fortawesome/fontawesome-free": "^5.13.0",
-    "@galtproject/frontend-core": "https://github.com/galtspace/galtproject-frontend-core.git#20f6013",
-    "@galtproject/geesome-libs": "https://github.com/galtspace/geesome-libs.git#1a98093",
-    "@litvintech/cyberjs": "https://github.com/litvintech/cyberjs.git",
+    "@galtproject/frontend-core": "git+https://github.com/galtspace/galtproject-frontend-core.git#20f6013",
+    "@galtproject/geesome-libs": "git+https://github.com/galtspace/geesome-libs.git#1a98093",
+    "@litvintech/cyberjs": "git+https://github.com/litvintech/cyberjs.git",
     "autoprefixer": "^9.6.0",
     "axios": "^0.19.0",
     "bip39": "^3.0.2",
@@ -99,5 +99,13 @@
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.2",
     "webpack-extension-reloader": "^1.1.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CipherDogs/cyb-virus.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CipherDogs/cyb-virus/issues"
+  },
+  "homepage": "https://github.com/CipherDogs/cyb-virus#readme"
 }

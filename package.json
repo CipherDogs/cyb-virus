@@ -21,7 +21,6 @@
   "dependencies": {
     "@cybercongress/js-amino": "git+https://github.com/cybercongress/js-amino.git",
     "@fortawesome/fontawesome-free": "^5.13.0",
-    "@galtproject/frontend-core": "git+https://github.com/galtspace/galtproject-frontend-core.git#20f6013",
     "@galtproject/geesome-libs": "git+https://github.com/galtspace/geesome-libs.git#1a98093",
     "@litvintech/cyberjs": "git+https://github.com/litvintech/cyberjs.git",
     "autoprefixer": "^9.6.0",

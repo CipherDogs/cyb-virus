@@ -1,8 +1,8 @@
 {
   "name": "cyb-browser-extension",
   "version": "1.0.0",
-  "description": "A Vue.js web extension",
-  "author": "jonybang <Jonybange@gmail.com>",
+  "description": "cyb~Virus Firefox extension",
+  "author": "DEADBLACKCLOVER <deadblackclover@protonmail.com>",
   "scripts": {
     "lint": "eslint --ext .js,.vue src",
     "prettier": "prettier \"src/**/*.{js,vue}\"",

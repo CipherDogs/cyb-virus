@@ -1,6 +1,6 @@
 {
   "name": "cyb-browser-extension",
-  "description": "A Vue.js web extension",
+  "description": "cyb~Virus Firefox extension",
   "version": null,
   "manifest_version": 2,
   "icons": {

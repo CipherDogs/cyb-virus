@@ -14,11 +14,11 @@ Help you fuckgoogle rigth from Firefox!
 
 ## Dev environment
 ```
-npm install
-npm run watch:dev
+yarn install
+yarn run watch:dev
 ```
 
 ## Build 
 ```
-npm run build:dev
+yarn run build:dev
 ```

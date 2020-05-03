@@ -1,12 +1,12 @@
 @font-face {
   font-family: Play;
-  src: url('chrome-extension://__MSG_@@extension_id__/fonts/Play.woff2');
-  src: url('chrome-extension://__MSG_@@extension_id__/fonts/Play.eot'); /* IE9 Compat Modes */
-  src: url('chrome-extension://__MSG_@@extension_id__/fonts/Play.eot?#iefix') format('embedded-opentype'),
-    /* IE6-IE8 */ url('chrome-extension://__MSG_@@extension_id__/fonts/Play.woff2') format('woff2'),
-    /* Super Modern Browsers */ url('chrome-extension://__MSG_@@extension_id__/fonts/Play.woff') format('woff'),
-    /* Pretty Modern Browsers */ url('chrome-extension://__MSG_@@extension_id__/fonts/Play.ttf') format('truetype'),
-    /* Safari, Android, iOS */ url('chrome-extension://__MSG_@@extension_id__/fonts/Play.svg#Play') format('svg'); /* Legacy iOS */
+  src: url('moz-extension://__MSG_@@extension_id__/fonts/Play.woff2');
+  src: url('moz-extension://__MSG_@@extension_id__/fonts/Play.eot'); /* IE9 Compat Modes */
+  src: url('moz-extension://__MSG_@@extension_id__/fonts/Play.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */ url('moz-extension://__MSG_@@extension_id__/fonts/Play.woff2') format('woff2'),
+    /* Super Modern Browsers */ url('moz-extension://__MSG_@@extension_id__/fonts/Play.woff') format('woff'),
+    /* Pretty Modern Browsers */ url('moz-extension://__MSG_@@extension_id__/fonts/Play.ttf') format('truetype'),
+    /* Safari, Android, iOS */ url('moz-extension://__MSG_@@extension_id__/fonts/Play.svg#Play') format('svg'); /* Legacy iOS */
 }
 
 #cyb-modal-container h1,

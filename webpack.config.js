@@ -117,6 +117,7 @@ const config = {
     new CopyWebpackPlugin([
       { from: 'icons', to: 'icons', ignore: ['icon.xcf'] },
       { from: 'popup/assets', to: 'assets' },
+      { from: 'fonts', to: 'fonts' },
       { from: 'singlefile', to: 'singlefile' },
       { from: '_locales', to: '_locales' },
       { from: 'popup/assets', to: 'popup/assets' },

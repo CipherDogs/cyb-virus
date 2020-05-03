@@ -97,7 +97,7 @@
     "fonts/Play.woff",
     "fonts/Play.woff2"
   ],
-  "permissions": ["contextMenus", "clipboardWrite", "contextMenus", "downloads", "storage", "tabs", "activeTab", "webNavigation", "<all_urls>"],
+  "permissions": ["contextMenus", "clipboardWrite", "downloads", "storage", "tabs", "activeTab", "webNavigation", "<all_urls>"],
   "options_ui": {
     "page": "options/options.html"
   },

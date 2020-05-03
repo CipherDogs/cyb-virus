@@ -136,8 +136,14 @@ this.singlefile.lib.core =
         ],
       },
       {
-        sequential: [{ option: 'removeAlternativeImages', action: 'removeAlternativeImages' }, { option: 'removeAlternativeFonts', action: 'removeAlternativeFonts' }],
-        parallel: [{ option: '!removeFrames', action: 'processFrames' }, { option: '!removeImports', action: 'processHtmlImports' }],
+        sequential: [
+          { option: 'removeAlternativeImages', action: 'removeAlternativeImages' },
+          { option: 'removeAlternativeFonts', action: 'removeAlternativeFonts' },
+        ],
+        parallel: [
+          { option: '!removeFrames', action: 'processFrames' },
+          { option: '!removeImports', action: 'processHtmlImports' },
+        ],
       },
       {
         sequential: [{ action: 'replaceStylesheets' }, { action: 'replaceStyleAttributes' }, { action: 'insertVariables' }, { option: 'compressHTML', action: 'compressHTML' }],
@@ -266,7 +272,7 @@ this.singlefile.lib.core =
       }
 
       executeTask(task) {
-        if (!task.option || ((task.option.startsWith('!') && !this.options[task.option]) || this.options[task.option])) {
+        if (!task.option || (task.option.startsWith('!') && !this.options[task.option]) || this.options[task.option]) {
           return this.processor[task.action]();
         }
       }

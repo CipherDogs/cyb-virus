@@ -60,7 +60,7 @@ singlefile.extension.core.bg.autosave = (() => {
 
   async function onTabUpdated(tabId, changeInfo, tab) {
     const [options, autoSaveEnabled] = await Promise.all([singlefile.extension.core.bg.config.getOptions(tab.url, true), isEnabled(tab)]);
-    if (options && ((options.autoSaveLoad || options.autoSaveLoadOrUnload) && autoSaveEnabled)) {
+    if (options && (options.autoSaveLoad || options.autoSaveLoadOrUnload) && autoSaveEnabled) {
       if (changeInfo.status == 'complete') {
         singlefile.extension.core.bg.business.saveTab(tab, { autoSave: true });
       }

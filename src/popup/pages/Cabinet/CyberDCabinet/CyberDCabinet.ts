@@ -43,7 +43,7 @@ export default {
       this.bandwidth = await CyberD.getBandwidth(this.currentAccount.address);
     },
     downloadPage() {
-      (global as any).chrome.runtime.sendMessage({ type: 'download-page' }, response => {});
+      (global as any).browser.runtime.sendMessage({ type: 'download-page' }, response => {});
     },
   },
   computed: {

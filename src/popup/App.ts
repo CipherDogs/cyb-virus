@@ -43,7 +43,7 @@ Vue.use(storePlugin, {
   [StorageVars.IpfsUrl]: '/workers/ipfs/',
   [StorageVars.CurrentCabinetRoute]: null,
   [StorageVars.Settings]: null,
-  [StorageVars.ExtensionTabPageUrl]: 'chrome-extension://' + (global as any).chrome.runtime.id + '/tab-page/index.html',
+  [StorageVars.ExtensionTabPageUrl]: 'moz-extension://' + (global as any).browser.runtime.id + '/tab-page/index.html',
 });
 
 export default {
@@ -51,7 +51,7 @@ export default {
   components: { NetworkSelectContainer, AccountSelectContainer },
 
   async created() {
-    (global as any).chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+    (global as any).browser.runtime.onMessage.addListener((request, sender, sendResponse) => {
       if (!request || !request.type) {
         return;
       }
@@ -88,7 +88,7 @@ export default {
         const query = JSON.parse((await PermanentStorage.getValue(StorageVars.Query)) as any);
         this.$router.push({ path, query });
 
-        (global as any).chrome.runtime.sendMessage({ type: 'popup-get-action' });
+        (global as any).browser.runtime.sendMessage({ type: 'popup-get-action' });
         this.loading = false;
         return;
       }
@@ -115,7 +115,7 @@ export default {
             this.$router.push({ name: 'new-wallet-welcome' });
           });
         return;
-        // return (global as any).chrome.tabs.create({url: (global as any).extension.getURL('popup.html#window')});
+        // return (global as any).browser.tabs.create({url: (global as any).extension.getURL('popup.html#window')});
       }
     },
     setNetwork() {

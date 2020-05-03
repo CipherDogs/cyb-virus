@@ -12,6 +12,10 @@ Help you fuckgoogle rigth from Firefox!
 6. Primitive search in Cyber protocol
 7. Node config
 
+## Firefox dev
+* [Trying_it_out](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension#Trying_it_out)
+* [Package your extension](https://extensionworkshop.com/documentation/publish/package-your-extension/)
+
 ## Dev environment
 ```
 yarn install

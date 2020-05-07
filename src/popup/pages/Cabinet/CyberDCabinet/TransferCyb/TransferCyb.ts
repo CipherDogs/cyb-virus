@@ -43,10 +43,15 @@ export default {
       return !this.addressTo || !this.amount;
     },
   },
+  watch: {
+    amount: function(val) {
+      this.amount = val < 0 ? 0 : val;
+    },
+  },
   data() {
     return {
       addressTo: '',
-      amount: null,
+      amount: 0,
     };
   },
 };

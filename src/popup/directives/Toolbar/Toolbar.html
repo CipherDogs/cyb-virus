@@ -1,41 +1,11 @@
 <div class="toolbar">
   <div class="left-group">
     <div class="logo">
-      <a href @click.prevent="showNavigation = true;">
+      <router-link :to="currentCabinet">
         <img src="assets/img/logo_sm.png" />
-      </a>
+      </router-link>
     </div>
   </div>
-
-  <md-drawer :md-active.sync="showNavigation" md-swipeable>
-    <!--<md-toolbar class="md-transparent" md-elevation="0">-->
-    <span class="md-title">Menu</span>
-    <!--</md-toolbar>-->
-
-    <md-list>
-      <md-list-item :to="currentCabinet" @click="showNavigation = false;">
-        <md-icon class="fas fa-home"></md-icon>
-        <span class="md-list-item-text">Home</span>
-      </md-list-item>
-
-      <md-list-item :to="{name: 'cabinet-ipfs-saved-content'}" @click="showNavigation = false;">
-        <md-icon class="fas fa-archive"></md-icon>
-        <span class="md-list-item-text">Saved content</span>
-      </md-list-item>
-
-      <md-list-item :to="{name: 'cabinet-settings'}" @click="showNavigation = false;">
-        <md-icon class="fas fa-cog"></md-icon>
-        <span class="md-list-item-text">Settings</span>
-      </md-list-item>
-
-      <md-list-item :to="{name: 'cabinet-backup'}" @click="showNavigation = false;">
-        <md-icon class="fas fa-box"></md-icon>
-        <span class="md-list-item-text">Backup</span>
-      </md-list-item>
-    </md-list>
-  </md-drawer>
-
-  <!--<div class="right-group">-->
   <div class="network">
     <input type="text" placeholder="Search Content" v-model="search" />
     <!--<network-select-input></network-select-input>-->
@@ -43,5 +13,4 @@
   <div class="account">
     <account-select-input></account-select-input>
   </div>
-  <!--</div>-->
 </div>

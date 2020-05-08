@@ -70,7 +70,10 @@ export default {
     return {
       peersLoading: true,
       balance: null,
-      bandwidth: null,
+      bandwidth: {
+        remained: 0,
+        maxValue: 0,
+      },
       peersError: false,
       peersCount: null,
     };

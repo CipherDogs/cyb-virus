@@ -54,7 +54,16 @@ export default {
       return this.$store.state[StorageVars.CurrentAccounts] || [];
     },
     balanceStr() {
-      return this.balance === null ? '...' : this.balance;
+      if (this.balance < 1) {
+        return this.balance * 1000000000;
+      } else if (this.balance === null) {
+        return '...';
+      } else {
+        return this.balance.toString().split('.')[0];
+      }
+    },
+    eul() {
+      return this.balance < 1 ? 'EUL' : 'GEUL';
     },
   },
   data() {

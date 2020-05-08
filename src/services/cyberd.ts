@@ -18,13 +18,7 @@ export class CyberD {
 
   static async getGigaBalance(address) {
     return this.getBalance(address).then(cyb => {
-      cyb = EthData.weiToDecimals(cyb, 9);
-
-      const strSplit = cyb.toString().split('.');
-      if (strSplit.length === 1) {
-        return cyb;
-      }
-      return parseFloat(strSplit[0] + '.' + strSplit[1].slice(0, 2));
+      return EthData.weiToDecimals(cyb, 9);
     });
   }
 

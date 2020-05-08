@@ -182,7 +182,7 @@ export function getIpfsHash(string) {
     const unixFsFile = new Unixfs('file', Buffer.from(string));
     const buffer = unixFsFile.marshal();
 
-    new DAGNode(buffer, (err, dagNode) => {
+    DAGNode.create(buffer, (err, dagNode) => {
       if (err) {
         reject(new Error('Cannot create ipfs DAGNode'));
       }

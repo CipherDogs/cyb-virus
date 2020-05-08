@@ -35,7 +35,7 @@
     "ipfs": "^0.39.0",
     "ipfs-http-client": "^32.0.1",
     "ipfs-unixfs": "0.1.16",
-    "ipld-dag-pb": "0.18.5",
+    "ipld-dag-pb": "0.15.3",
     "multicodec": "0.2.7",
     "p-iteration": "^1.1.8",
     "postcss-loader": "^3.0.0",

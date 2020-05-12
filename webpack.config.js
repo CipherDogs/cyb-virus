@@ -23,7 +23,7 @@ const config = {
     filename: '[name].js',
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js'],
+    extensions: ['.ts', '.tsx', '.js', '.scss'],
     alias: {
       vue: 'vue/dist/vue.esm.js',
     },
@@ -135,11 +135,7 @@ const config = {
         transform: content => {
           const jsonContent = JSON.parse(content);
           jsonContent.version = version;
-
-          if (config.mode === 'development') {
-            jsonContent.content_security_policy = "script-src 'self' 'unsafe-eval'; object-src 'self'";
-          }
-
+          jsonContent.content_security_policy = "script-src 'self' 'unsafe-eval'; object-src 'self'";
           return JSON.stringify(jsonContent, null, 2);
         },
       },

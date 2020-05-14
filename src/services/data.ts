@@ -165,6 +165,20 @@ export class AppWallet {
     this.$store.commit(StorageVars.Account, newAccount);
   }
 
+  static async deleteAccount(storageVar, address) {
+    const accounts = _.clone(this.$store.state[storageVar]) || [];
+
+    let newAccounts = [];
+
+    if (_.some(accounts, { address })) {
+      newAccounts = accounts.filter(item => {
+        return item.address != address;
+      });
+    }
+
+    this.$store.commit(storageVar, newAccounts);
+  }
+
   static async encryptByPassword(data) {
     return AppCrypto.encrypt(data, await this.getPassword());
   }

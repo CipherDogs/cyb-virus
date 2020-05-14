@@ -1,5 +1,5 @@
 import { EventBus, ACCOUNT_SELECT_HIDE, ACCOUNT_SELECT_PREVENT_CLOSE, ACCOUNT_SELECT_SHOW, ACCOUNT_SELECT_ITEM } from '../../../../services/events';
-import { StorageVars } from '../../../../services/data';
+import { AppWallet, StorageVars } from '../../../../services/data';
 import EthData from '@galtproject/frontend-core/libs/EthData';
 const _ = require('lodash');
 
@@ -61,6 +61,11 @@ export default {
     selectAccountByIndex(index) {
       EventBus.$emit(ACCOUNT_SELECT_ITEM, { uniqId: this.uniqId, account: this.accountList[index] });
       this.$router.push(this.currentCabinet);
+    },
+    async deleteAccount(account) {
+      await AppWallet.deleteAccount(StorageVars.CyberDAccounts, account.address);
+      this.$store.commit(StorageVars.CurrentAccounts, this.$store.state[StorageVars.CyberDAccounts]);
+      this.selectAccountByIndex(0);
     },
   },
   watch: {},

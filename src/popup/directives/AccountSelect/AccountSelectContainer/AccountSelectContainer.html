@@ -5,6 +5,7 @@
     <div class="accounts-list">
       <div v-for="(account, index) in accountListDisplay" :class="{'active': account.address === currentAccount.address}">
         <a href @click.prevent="selectAccountByIndex(index)">{{account.prettyAddress}}</a>
+        <i class="fas fa-trash" style="cursor: pointer;" @click.prevent="deleteAccount(account)"></i>
       </div>
     </div>
 

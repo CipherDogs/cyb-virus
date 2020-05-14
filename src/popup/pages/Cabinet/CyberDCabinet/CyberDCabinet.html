@@ -2,8 +2,8 @@
   <h2 v-if="currentAccount"><pretty-hex :hex="currentAccount.address"></pretty-hex></h2>
   <h1 style="cursor: pointer;" @click="getBalance" title="Update balance">{{balanceStr}} {{eul}}</h1>
 
-  <router-link :to="{name: 'cabinet-cyberd-save-and-link', query: {from: 'cabinet-cyberd'}}" tag="button">Link</router-link>
-  <router-link :to="{name: 'cabinet-cyberd-transfer', query: {from: 'cabinet-cyberd'}}" tag="button">Send</router-link>
+  <router-link :to="{name: 'cabinet-cyberd-save-and-link', query: {from: 'cabinet-cyberd'}}" tag="button" style="cursor: pointer;">Link</router-link>
+  <router-link :to="{name: 'cabinet-cyberd-transfer', query: {from: 'cabinet-cyberd'}}" tag="button" style="cursor: pointer;">Send</router-link>
 
   <div>
     <h3>Bandwidth:</h3>
@@ -18,7 +18,9 @@
     <h2 v-else>{{ peersCount }}</h2>
   </div>
 
-  <button style="border: 0;" @click="downloadPage" :disabled="peersError || peersLoading" title="Download page to IPFS"><i class="fas fa-file-download fa-2x"></i></button>
+  <button style="border: 0; cursor: pointer;" @click="downloadPage" :disabled="peersError || peersLoading" title="Download page to IPFS">
+    <i class="fas fa-file-download fa-2x"></i>
+  </button>
   <router-link class="md-icon-button" :to="{name: 'cabinet-ipfs-saved-content'}" title="Saved content"><i class="fas fa-archive fa-2x"></i></router-link>
   <router-link class="md-icon-button" :to="{name: 'cabinet-settings'}" title="Settings"><i class="fas fa-cogs fa-2x"></i></router-link>
   <router-link class="md-icon-button" :to="{name: 'cabinet-backup'}" title="Backup"><i class="fas fa-database fa-2x"></i></router-link>

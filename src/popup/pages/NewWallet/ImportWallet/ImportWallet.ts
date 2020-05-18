@@ -2,9 +2,6 @@ import { AppWallet } from '../../../../services/data';
 
 export default {
   template: require('./ImportWallet.html'),
-  created() {
-    // this.seedPhrase = AppWallet.generateSeed();
-  },
   methods: {
     async save() {
       AppWallet.setSeed(this.seedPhrase, this.password);

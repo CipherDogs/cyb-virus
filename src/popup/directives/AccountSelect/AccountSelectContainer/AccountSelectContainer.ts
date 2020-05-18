@@ -65,7 +65,11 @@ export default {
     async deleteAccount(account) {
       await AppWallet.deleteAccount(StorageVars.CyberDAccounts, account.address);
       this.$store.commit(StorageVars.CurrentAccounts, this.$store.state[StorageVars.CyberDAccounts]);
-      this.selectAccountByIndex(0);
+      if (this.accountListDisplay.length == 0) {
+        this.$router.push('/new-wallet/welcome');
+      } else {
+        this.selectAccountByIndex(0);
+      }
     },
   },
   watch: {},

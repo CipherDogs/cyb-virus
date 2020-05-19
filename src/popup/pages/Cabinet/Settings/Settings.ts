@@ -28,11 +28,19 @@ export default {
   computed: {
     settingList() {
       return this.names.map(name => {
-        return {
-          name,
-          title: EthData.humanizeKey(name),
-          data: getSettingData(name),
-        };
+        if (name == 'storage-node-address') {
+          return {
+            name,
+            title: 'IPFS endpoint',
+            data: getSettingData(name),
+          };
+        } else if (name == 'storage-cyber-address') {
+          return {
+            name,
+            title: 'Cyber endpoint',
+            data: getSettingData(name),
+          };
+        }
       });
     },
     nameValueArr() {

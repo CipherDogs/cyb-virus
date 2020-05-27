@@ -29,7 +29,18 @@ yarn run watch:dev
 If developing, after making changes - reload the extension
 
 
-## Build 
+### Build
 ```
 yarn run build:dev
+```
+
+## Production
+```
+yarn install
+yarn run watch
+```
+
+### Build
+```
+yarn run build
 ```

@@ -43,7 +43,7 @@ Vue.use(storePlugin, {
   [StorageVars.IpfsUrl]: '/workers/ipfs/',
   [StorageVars.CurrentCabinetRoute]: null,
   [StorageVars.Settings]: null,
-  [StorageVars.ExtensionTabPageUrl]: 'moz-extension://' + (global as any).browser.runtime.id + '/tab-page/index.html',
+  [StorageVars.ExtensionTabPageUrl]: 'chrome-extension://' + (global as any).chrome.runtime.id + '/tab-page/index.html',
 });
 
 export default {

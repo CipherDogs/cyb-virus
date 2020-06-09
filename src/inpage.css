@@ -1,12 +1,14 @@
 @font-face {
   font-family: Play;
-  src: url('moz-extension://__MSG_@@extension_id__/fonts/Play.woff2');
-  src: url('moz-extension://__MSG_@@extension_id__/fonts/Play.eot'); /* IE9 Compat Modes */
-  src: url('moz-extension://__MSG_@@extension_id__/fonts/Play.eot?#iefix') format('embedded-opentype'),
-    /* IE6-IE8 */ url('moz-extension://__MSG_@@extension_id__/fonts/Play.woff2') format('woff2'),
-    /* Super Modern Browsers */ url('moz-extension://__MSG_@@extension_id__/fonts/Play.woff') format('woff'),
-    /* Pretty Modern Browsers */ url('moz-extension://__MSG_@@extension_id__/fonts/Play.ttf') format('truetype'),
-    /* Safari, Android, iOS */ url('moz-extension://__MSG_@@extension_id__/fonts/Play.svg#Play') format('svg'); /* Legacy iOS */
+  src: url('chrome-extension://__MSG_@@extension_id__/fonts/Play.woff2');
+  src: url('chrome-extension://__MSG_@@extension_id__/fonts/Play.eot');
+  /* IE9 Compat Modes */
+  src: url('chrome-extension://__MSG_@@extension_id__/fonts/Play.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */ url('chrome-extension://__MSG_@@extension_id__/fonts/Play.woff2') format('woff2'),
+    /* Super Modern Browsers */ url('chrome-extension://__MSG_@@extension_id__/fonts/Play.woff') format('woff'),
+    /* Pretty Modern Browsers */ url('chrome-extension://__MSG_@@extension_id__/fonts/Play.ttf') format('truetype'),
+    /* Safari, Android, iOS */ url('chrome-extension://__MSG_@@extension_id__/fonts/Play.svg#Play') format('svg');
+  /* Legacy iOS */
 }
 
 #cyb-modal-container h1,
@@ -21,6 +23,7 @@
 .cyb-extension-modal .tingle-modal-box {
   background: transparent;
 }
+
 .cyb-extension-modal .tingle-modal-box__content {
   border-radius: 4px;
   background: black;
@@ -31,9 +34,11 @@
   /* fix of bottom border*/
   margin-bottom: 1px;
 }
+
 .cyb-extension-modal .tingle-modal-box__footer {
   display: none;
 }
+
 #cyb-modal-container {
   display: flex;
 }
@@ -41,17 +46,20 @@
 #cyb-modal-container .img-container {
   width: 70%;
 }
+
 #cyb-modal-container .img-container > * {
   width: auto;
   max-width: 100%;
   max-height: 60vh;
 }
+
 .inputs-container {
   width: 30%;
 }
 
 #cyb-save-button {
 }
+
 button.cyb-button,
 .cyb-notify {
   font-family: Play;
@@ -63,17 +71,21 @@ button.cyb-button,
   font-size: 18px;
   color: #36d6ae;
 }
+
 .toastify.cyb-notify {
   padding: 15px 20px;
   font-size: 16px;
 }
+
 button.cyb-button:focus {
   box-shadow: #38d6ae 0px 0px 10px 0px;
 }
+
 button.cyb-button[disabled] {
   color: grey;
   border: 1px solid grey;
 }
+
 button.cyb-button.cyb-small-btn {
   font-size: 12px;
 }
@@ -141,11 +153,13 @@ textarea {
   transform: rotate(45deg) scale3D(1, 1, 1);
   transition: 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
+
 #cyb-content-link-checkbox-text {
   position: relative;
   left: 5px;
   bottom: 4px;
 }
+
 #cyb-content-description-container,
 #cyb-content-link-checkbox-container,
 #cyb-content-link-inputs,

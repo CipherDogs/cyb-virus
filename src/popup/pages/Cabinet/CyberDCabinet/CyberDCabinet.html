@@ -1,5 +1,7 @@
 <div style="text-align: center;">
-  <h2 v-if="currentAccount"><pretty-hex :hex="currentAccount.address"></pretty-hex></h2>
+  <h2 style="cursor: pointer;" v-if="currentAccount" @click="goExplorer">
+    <pretty-hex :hex="currentAccount.address"></pretty-hex>
+  </h2>
   <h1 style="cursor: pointer;" @click="getBalance" title="Update balance">{{balanceStr}} {{eul}}</h1>
 
   <router-link :to="{name: 'cabinet-cyberd-save-and-link', query: {from: 'cabinet-cyberd'}}" tag="button" style="cursor: pointer;">Link</router-link>

@@ -45,6 +45,9 @@ export default {
     downloadPage() {
       (global as any).browser.runtime.sendMessage({ type: 'download-page' }, response => {});
     },
+    goExplorer() {
+      window.open('https://cyber.page/network/euler/contract/' + this.currentAccount.address);
+    },
   },
   computed: {
     currentAccount() {

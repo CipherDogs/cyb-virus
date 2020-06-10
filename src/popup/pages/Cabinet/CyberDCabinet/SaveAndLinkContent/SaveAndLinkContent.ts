@@ -8,7 +8,6 @@ const pIteration = require('p-iteration');
 export default {
   template: require('./SaveAndLinkContent.html'),
   created() {
-    this.linkKeywords = this.$route.query.linkKeywords;
     this.inputDescription = this.$route.query.description;
     this.size = this.$route.query.size;
   },
@@ -23,26 +22,24 @@ export default {
       });
 
       try {
-        if (this.linkKeywords) {
-          const keywordHashes = await addIpfsContentArray(this.resultKeywords);
+        const keywordHashes = await addIpfsContentArray(this.resultKeywords);
 
-          const results = await pIteration.mapSeries(keywordHashes, async keywordHash => {
-            return CyberD.link(
-              {
-                address: this.currentAccount.address,
-                privateKey: await AppWallet.decryptByPassword(this.currentAccount.encryptedPrivateKey),
-              },
-              keywordHash,
-              this.resultContentHash
-            );
-          });
+        const results = await pIteration.mapSeries(keywordHashes, async keywordHash => {
+          return CyberD.link(
+            {
+              address: this.currentAccount.address,
+              privateKey: await AppWallet.decryptByPassword(this.currentAccount.encryptedPrivateKey),
+            },
+            keywordHash,
+            this.resultContentHash
+          );
+        });
 
-          console.log('link results', results);
-        }
+        console.log('link results', results);
 
         this.$notify({
           type: 'success',
-          text: this.linkKeywords ? 'Successfully saved and linked' : 'Successfully saved',
+          text: 'Successfully saved and linked',
         });
         this.$router.push({ name: 'cabinet-cyberd' });
       } catch (e) {
@@ -74,7 +71,7 @@ export default {
       return this.$store.state[StorageVars.Account];
     },
     disableSaveAndLink() {
-      return !(this.contentHash || this.inputContentHash) || (this.linkKeywords && !(this.keywordsStr || this.inputKeywordsStr));
+      return !(this.contentHash || this.inputContentHash) || !(this.keywordsStr || this.inputKeywordsStr);
     },
   },
   watch: {
@@ -87,7 +84,6 @@ export default {
       inputContentHash: '',
       inputDescription: '',
       inputKeywordsStr: '',
-      linkKeywords: false,
     };
   },
 };

@@ -22,7 +22,7 @@
     "@cybercongress/js-amino": "git+https://github.com/cybercongress/js-amino.git",
     "@galtproject/frontend-core": "git+https://github.com/galtspace/galtproject-frontend-core.git",
     "@galtproject/geesome-libs": "git+https://github.com/galtspace/geesome-libs.git#1a98093",
-    "@litvintech/cyberjs": "git+https://github.com/litvintech/cyberjs.git",
+    "@cipherdogs/cyberjs": "git+https://github.com/CipherDogs/cyberjs.git",
     "autoprefixer": "^9.6.0",
     "axios": "^0.19.0",
     "bip39": "^3.0.2",

@@ -1,6 +1,6 @@
 {
   "name": "cyb-browser-extension",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "cyb~Virus Firefox extension",
   "author": "DEADBLACKCLOVER <deadblackclover@protonmail.com>",
   "scripts": {

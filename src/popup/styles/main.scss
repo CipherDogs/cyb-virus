@@ -173,6 +173,9 @@ h5 {
   .add-new-account {
     margin-top: 15px;
   }
+  .content {
+    border-radius: 5px;
+  }
 }
 
 .md-drawer.md-theme-default {
@@ -181,4 +184,11 @@ h5 {
 }
 .pretty-hex-container {
   white-space: nowrap;
+}
+.cyber-cabinet-address,
+.cyber-cabinet-balance {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

@@ -805,6 +805,18 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
+"@cipherdogs/cyberjs@git+https://github.com/CipherDogs/cyberjs.git":
+  version "1.0.0"
+  resolved "git+https://github.com/CipherDogs/cyberjs.git#d1bf049e9e8f7dfcfe39b47583168752a64efc8d"
+  dependencies:
+    axios "^0.18.0"
+    bech32 "^1.1.3"
+    bip39 "^2.5.0"
+    bn.js "^4.11.8"
+    ripemd160 "^2.0.2"
+    secp256k1 "^3.6.2"
+    sha256 "^0.2.0"
+
 "@cybercongress/js-amino@git+https://github.com/cybercongress/js-amino.git":
   version "1.0.0"
   resolved "git+https://github.com/cybercongress/js-amino.git#de18f307bec1c1162d7975c6e146558f21183199"
@@ -1174,18 +1186,6 @@
     "@hapi/boom" "7.x.x"
     "@hapi/bourne" "1.x.x"
     "@hapi/hoek" "8.x.x"
-
-"@litvintech/cyberjs@git+https://github.com/litvintech/cyberjs.git":
-  version "1.0.0"
-  resolved "git+https://github.com/litvintech/cyberjs.git#502e86555974cb18f05ac85f7de7d87aa78cf1ef"
-  dependencies:
-    axios "^0.18.0"
-    bech32 "^1.1.3"
-    bip39 "^2.5.0"
-    bn.js "^4.11.8"
-    ripemd160 "^2.0.2"
-    secp256k1 "^3.6.2"
-    sha256 "^0.2.0"
 
 "@protobufjs/utf8@^1.1.0":
   version "1.1.0"
@@ -11503,7 +11503,7 @@ pull-utf8-decoder@^1.0.2:
   resolved "https://registry.yarnpkg.com/pull-utf8-decoder/-/pull-utf8-decoder-1.0.2.tgz#a7afa2384d1e6415a5d602054126cc8de3bcbce7"
   integrity sha1-p6+iOE0eZBWl1gIFQSbMjeO8vOc=
 
-"pull-ws@github:hugomrdias/pull-ws#fix/bundle-size":
+pull-ws@hugomrdias/pull-ws#fix/bundle-size:
   version "3.3.1"
   resolved "https://codeload.github.com/hugomrdias/pull-ws/tar.gz/8e2ce0bb3b1cd6804828316e937fff8e0bef6225"
   dependencies:

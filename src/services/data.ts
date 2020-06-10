@@ -7,7 +7,7 @@ const regex = require('./regex');
 const Unixfs = require('ipfs-unixfs');
 const { DAGNode, util: DAGUtil } = require('ipld-dag-pb');
 
-const cyberjsCrypto = require('@litvintech/cyberjs/crypto');
+const cyberjsCrypto = require('@cipherdogs/cyberjs/crypto');
 
 export enum CoinType {
   Cosmos = 'cosmos',

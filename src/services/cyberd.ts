@@ -1,7 +1,7 @@
 import EthData from '@galtproject/frontend-core/libs/EthData';
 
-const cyberjsBuilder = require('@litvintech/cyberjs/builder');
-const cyberjsCodec = require('@litvintech/cyberjs/codec');
+const cyberjsBuilder = require('@cipherdogs/cyberjs/builder');
+const cyberjsCodec = require('@cipherdogs/cyberjs/codec');
 const axios = require('axios');
 import { getSettings } from '../services/backgroundGateway';
 import { Settings } from '../backgroundServices/types';
